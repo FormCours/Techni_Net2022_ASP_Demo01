@@ -6,6 +6,11 @@
 
 <h1>Les canards !</h1>
 <a asp-controller="Duck" asp-action="List">Afficher la liste des canards ♠</a>
+<br />
+<a asp-controller="Duck" asp-action="Detail" asp-route-id="1" >Page detail - Element 1</a>
+<br />
+<a asp-controller="Duck" asp-action="Detail" asp-route-id="2" >Page detail - Element 2</a>
+<br />
 
 <h2>Il est @DateTime.Now.ToShortTimeString()</h2>
 

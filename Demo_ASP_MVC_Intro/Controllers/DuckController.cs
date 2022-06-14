@@ -28,8 +28,12 @@ namespace Demo_ASP_MVC_Intro.Controllers
             return View(ducks);
         }
 
-        public IActionResult Detail()
+        public IActionResult Detail(int id)
         {
+            ViewData["IdElement"] = id;
+
+            // TODO Afficher le detail d'un Duck =)
+
             return View();
         }
 
