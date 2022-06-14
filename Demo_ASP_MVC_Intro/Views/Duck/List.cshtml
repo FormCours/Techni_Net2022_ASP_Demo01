@@ -1,0 +1,19 @@
+﻿@* ↓ Définition du type de données recu par la vue *@
+@model IEnumerable<Duck>
+@*@model System.Collections.Generic.IEnumerable<Demo_ASP_MVC_Intro.Models.Duck>*@
+
+@* Une fois le type de données précisé, on peut utiliser la propriété "Model" *@
+
+@{
+    ViewData["Title"] = "La liste des canards";
+}
+
+<h1>La liste des canards</h1>
+
+<ol>
+    @foreach(Duck duck in Model)
+    {
+        int age = (int) ((DateTime.Now - duck.Birthdate).TotalDays/365.242199);
+        <li>@duck.Firstname @duck.Lastname - @age ans</li>
+    }
+</ol>

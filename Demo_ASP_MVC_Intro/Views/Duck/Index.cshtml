@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Les canards";
+}
+
+@*Ceci est un commentaire en razor*@
+
+<h1>Les canards !</h1>
+<a asp-controller="Duck" asp-action="List">Afficher la liste des canards ♠</a>
+
+<h2>Il est @DateTime.Now.ToShortTimeString()</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis erat quis risus finibus cursus. Nunc placerat rutrum mi sit amet lobortis. Vestibulum aliquam porta lorem, vitae lacinia metus malesuada in. Vestibulum consequat dictum nisl sit amet vulputate. Donec ornare nisl a ex iaculis, sed ullamcorper felis congue. Integer justo elit, auctor vel tortor ut, elementum venenatis tortor. Duis feugiat hendrerit mauris, at tempor odio pharetra nec.</p>
+
+<p>Adresse de contact: della.duck@gmail.com</p>
+
+@{
+    int nb = (int)ViewData["Number"];
+}
+<p>La valeur @nb est @(nb % 2 == 0 ? "Paire" : "Impaire")</p>
+
+<h3>@ViewBag.Message</h3>
+
+<ul>
+@{
+    // Ceci est une ecriture dans la console C# 
+    Console.WriteLine("Console log dans la vue !");
+
+    for (var i = 1; i <= 5; i++)
+    {
+            <li>Element @i</li>
+    }
+}
+</ul>
